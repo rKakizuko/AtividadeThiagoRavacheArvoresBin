@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class NoEArvore {
     class No {
         String valor;
@@ -60,6 +63,20 @@ public class NoEArvore {
                 buscaPosOrdem(node.esquerda);
                 buscaPosOrdem(node.direita);
                 System.out.print(node.valor + " ");
+            }
+        }
+        public void buscaEmNivel() {
+            if (raiz == null) return;
+
+            Queue<No> fila = new LinkedList<>();
+            fila.add(raiz);
+
+            while (!fila.isEmpty()) {
+                No atual = fila.poll();
+                System.out.print(atual.valor + " ");
+
+                if (atual.esquerda != null) fila.add(atual.esquerda);
+                if (atual.direita != null) fila.add(atual.direita);
             }
         }
 

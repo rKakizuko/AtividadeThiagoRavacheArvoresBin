@@ -21,6 +21,9 @@ public class Main {
         System.out.println("Buscando em Pos Ordem: ");
         arvore.buscaPosOrdem(arvore.raiz);
         System.out.println("\n");
+        System.out.println("Buscando em Nivel: ");
+        arvore.buscaEmNivel(); //nao passa parametro porque na funcao pega ja o no definido como raiz para adicionar o resto em LL e percorrer por nivel
+        System.out.println("\n");
 
 
 
