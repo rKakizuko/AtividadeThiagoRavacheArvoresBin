@@ -1,14 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        NoEArvore.Arvore arvore = new NoEArvore().new Arvore("A");
+        NoEArvore.Arvore arvore = new NoEArvore().new Arvore("L");
         //professor do ceu, fui criar a classe com nome de NoEArvore pra colocar as duas clases que voce tinha falado juntas... fui jovem.
         //A instancia desse negocio ficou horripilante
-        arvore.inserir("B");
-        arvore.inserir("C");
+        arvore.inserir("C"); //embaralhado de proposito para ver como o insert esta funcionando
+        arvore.inserir("M"); //nao sei se é o convencional como o chat ta falando mas ele adiciona na direta se for > que o antecessor e na esquerda se for <.
+        arvore.inserir("A");
         arvore.inserir("D");
-        arvore.inserir("E");
-        arvore.inserir("F");
+        arvore.inserir("N");
+        System.out.println("Estrutura da Árvore:");
+        arvore.printTreeStructure();
 
         System.out.println("Número de nós: " + arvore.contarNos(arvore.raiz));
+        System.out.println("Buscando em pre Ordem: ");
+        arvore.buscaPreOrdem(arvore.raiz);
+        System.out.println("\n");
+
+
+
     }
 }
