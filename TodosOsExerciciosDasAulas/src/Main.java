@@ -17,6 +17,10 @@ public class Main {
         System.out.println("\n");
         System.out.println("Buscando em Ordem: ");
         arvore.buscaEmOrdem(arvore.raiz);
+        System.out.println("\n");
+        System.out.println("Buscando em Pos Ordem: ");
+        arvore.buscaPosOrdem(arvore.raiz);
+        System.out.println("\n");
 
 
 
