@@ -15,6 +15,8 @@ public class Main {
         System.out.println("Buscando em pre Ordem: ");
         arvore.buscaPreOrdem(arvore.raiz);
         System.out.println("\n");
+        System.out.println("Buscando em Ordem: ");
+        arvore.buscaEmOrdem(arvore.raiz);
 
 
 

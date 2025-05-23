@@ -48,6 +48,13 @@ public class NoEArvore {
                 buscaPreOrdem(node.direita);
             }
         }
+        public void buscaEmOrdem(No node) {
+            if (node != null) {
+                buscaEmOrdem(node.esquerda);
+                System.out.print(node.valor + " ");
+                buscaEmOrdem(node.direita);
+            }
+        }
 
 
         public void printTreeStructure() { // * isso foi feito com ajuda do chat para eu conseguir visualizar melhor o que estava acontencendo
