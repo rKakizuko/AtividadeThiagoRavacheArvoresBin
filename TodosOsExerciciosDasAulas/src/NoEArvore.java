@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class NoEArvore {
     class No {
@@ -51,11 +52,50 @@ public class NoEArvore {
                 buscaPreOrdem(node.direita);
             }
         }
+
+        public void buscaPreOrdemSemRecursividade(){
+            if (raiz == null){
+                return;
+            }
+            Stack <No> stack = new Stack<>();
+            stack.push(raiz);
+
+            while (!stack.isEmpty()){
+                No node = stack.pop();
+                System.out.print(node.valor + " ");
+
+                if (node.direita != null) {
+                    stack.push(node.direita);
+                }
+                if (node.esquerda != null){
+                    stack.push(node.esquerda);
+                }
+
+            }
+        }
         public void buscaEmOrdem(No node) {
             if (node != null) {
                 buscaEmOrdem(node.esquerda);
                 System.out.print(node.valor + " ");
                 buscaEmOrdem(node.direita);
+            }
+        }
+        public void buscaEmOrdemSemRecursividade() {
+            if (raiz == null) return;
+
+
+            Stack<No> stack = new Stack<>();
+            No current = raiz;
+
+
+            while (current != null || !stack.isEmpty()) {
+                while (current != null) {
+                    stack.push(current);
+                    current = current.esquerda;
+                }
+                current = stack.pop();
+                System.out.print(current.valor + " ");
+                current = current.direita;
             }
         }
         public void buscaPosOrdem(No node) {
@@ -64,6 +104,30 @@ public class NoEArvore {
                 buscaPosOrdem(node.direita);
                 System.out.print(node.valor + " ");
             }
+        }
+        public void buscaPosOrdemSemRecursividade() {
+            if (raiz == null) return;
+
+
+            Stack<No> stack1 = new Stack<>();
+            Stack<No> stack2 = new Stack<>();
+            stack1.push(raiz);
+
+
+            while (!stack1.isEmpty()) {
+                No temp = stack1.pop();
+                stack2.push(temp);
+
+
+                if (temp.esquerda != null) stack1.push(temp.esquerda);
+                if (temp.direita != null) stack1.push(temp.direita);
+            }
+
+
+            while (!stack2.isEmpty()) {
+                System.out.print(stack2.pop().valor + " ");
+            }
+            System.out.println();
         }
         public void buscaEmNivel() {
             if (raiz == null) return;

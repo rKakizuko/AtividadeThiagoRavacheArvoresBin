@@ -25,6 +25,20 @@ public class Main {
         arvore.buscaEmNivel(); //nao passa parametro porque na funcao pega ja o no definido como raiz para adicionar o resto em LL e percorrer por nivel
         System.out.println("\n");
 
+        System.out.println("Sem recursao: ");
+        System.out.println("\n");
+
+        System.out.println("Buscando em pre Ordem sem recursao: ");
+        arvore.buscaPreOrdemSemRecursividade();
+        System.out.println("\n");
+        System.out.println("Buscando em Ordem sem recursao: ");
+        arvore.buscaEmOrdemSemRecursividade();
+        System.out.println("\n");
+        System.out.println("Buscando em Pos Ordem sem recursao: ");
+        arvore.buscaPosOrdemSemRecursividade();
+        //Em nivel ja e sem recursividade.
+        System.out.println("\n");
+
 
 
     }
