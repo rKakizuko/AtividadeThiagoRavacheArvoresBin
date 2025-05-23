@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ArvoreENo/ArvoreENo.iml" filepath="$PROJECT_DIR$/ArvoreENo/ArvoreENo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArvoresEx2/ArvoresEx2.iml" filepath="$PROJECT_DIR$/ArvoresEx2/ArvoresEx2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArvoresEx3/ArvoresEx3.iml" filepath="$PROJECT_DIR$/ArvoresEx3/ArvoresEx3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArvoresEx4/ArvoresEx4.iml" filepath="$PROJECT_DIR$/ArvoresEx4/ArvoresEx4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArvoresEx5/ArvoresEx5.iml" filepath="$PROJECT_DIR$/ArvoresEx5/ArvoresEx5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/AtividadeThiagoRavacheArvoresBin.iml" filepath="$PROJECT_DIR$/.idea/AtividadeThiagoRavacheArvoresBin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TodosOsExerciciosDasAulas/TodosOsExerciciosDasAulas.iml" filepath="$PROJECT_DIR$/TodosOsExerciciosDasAulas/TodosOsExerciciosDasAulas.iml" />
+    </modules>
+  </component>
+</project>
