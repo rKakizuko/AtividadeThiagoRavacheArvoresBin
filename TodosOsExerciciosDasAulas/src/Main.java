@@ -12,6 +12,7 @@ public class Main {
         arvore.printTreeStructure();
 
         System.out.println("Número de nós: " + arvore.contarNos(arvore.raiz));
+        System.out.println("Número de nós Folha : " + arvore.contarNosFolha(arvore.raiz));
         System.out.println("Buscando em pre Ordem: ");
         arvore.buscaPreOrdem(arvore.raiz);
         System.out.println("\n");
@@ -27,7 +28,10 @@ public class Main {
 
         System.out.println("Sem recursao: ");
         System.out.println("\n");
-
+        System.out.println("Número de nós: ");
+        arvore.contarNosSemRecursividade(arvore.raiz);
+        System.out.println("Número de nós Folha: ");
+        arvore.contarNosFolhaSemRecursividade(arvore.raiz);
         System.out.println("Buscando em pre Ordem sem recursao: ");
         arvore.buscaPreOrdemSemRecursividade();
         System.out.println("\n");

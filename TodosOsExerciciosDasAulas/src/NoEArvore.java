@@ -44,6 +44,58 @@ public class NoEArvore {
             if (node == null) return 0;
             return 1 + contarNos(node.esquerda) + contarNos(node.direita);
         }
+        public void contarNosSemRecursividade(No node){
+            if (node == null){
+                System.out.println("Vazio");
+            }
+            Queue <No> fila = new LinkedList<>();
+            int contador = 0;
+            fila.add(raiz);
+            while (!fila.isEmpty()) {
+                No atual = fila.poll();
+
+                if (atual.esquerda != null) fila.add(atual.esquerda);
+                if (atual.direita != null) fila.add(atual.direita);
+                contador ++;
+            }
+            System.out.println(contador + "\n");
+
+
+        }
+        public int contarNosFolha(No node){
+            if (node == null){
+                return 0;
+            }
+            if (node.esquerda == null && node.direita == null){
+                return 1;
+            }
+            return contarNosFolha(node.esquerda) + contarNosFolha(node.direita);
+        }
+        public void contarNosFolhaSemRecursividade(No node){
+            if (node == null){
+                System.out.println("Vazio");
+            }
+            Queue <No> fila = new LinkedList<>();
+            int contadorFolha = 0;
+            fila.add(raiz);
+            while (!fila.isEmpty()) {
+                No atual = fila.poll();
+
+                if (atual.esquerda != null) {
+                    fila.add(atual.esquerda);
+                }
+                if (atual.direita != null){
+                    fila.add(atual.direita);
+                }
+                else if (atual.esquerda == null & atual.direita == null){
+                    contadorFolha++;
+                }
+            }
+            System.out.println(contadorFolha + "\n");
+
+
+        }
+
 
         public void buscaPreOrdem(No node) {
             if (node != null) {
