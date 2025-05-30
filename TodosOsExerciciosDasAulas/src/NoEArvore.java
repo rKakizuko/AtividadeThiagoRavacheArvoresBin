@@ -44,6 +44,22 @@ public class NoEArvore {
             if (node == null) return 0;
             return 1 + contarNos(node.esquerda) + contarNos(node.direita);
         }
+        public void contarNosSemRecursividadePilha(No node){
+            if (node == null){
+                System.out.println("Vazio");
+            }
+            Stack <No> pilha = new Stack<>();
+            int contador = 0;
+            pilha.push(raiz);
+            while (!pilha.isEmpty()) {
+                No atual = pilha.pop();
+
+                if (atual.esquerda != null) pilha.add(atual.esquerda);
+                if (atual.direita != null) pilha.add(atual.direita);
+                contador ++;
+            }
+            System.out.println(contador + "\n");
+        }
         public void contarNosSemRecursividade(No node){
             if (node == null){
                 System.out.println("Vazio");
